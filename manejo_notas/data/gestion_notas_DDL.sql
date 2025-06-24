@@ -2,18 +2,18 @@ USE gestion_notas;
 
 CREATE TABLE IF NOT EXISTS docentes(
     id INT NOT NULL AUTO_INCREMENT,
-    rut VARCHAR(12) NOT NULL,
-    nombre VARCHAR(250) NOT NULL,
-    email VARCHAR(250) NULL,
+    rut_docente VARCHAR(12) NOT NULL,
+    nombre_docente VARCHAR(250) NOT NULL,
+    email_docente VARCHAR(250) NULL,
 
     CONSTRAINT pk_docente PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS asignaturas(
     id INT NOT NULL AUTO_INCREMENT,
-    codigo VARCHAR(12) NOT NULL,
-    nombre VARCHAR(250) NOT NULL,
-    descripcion VARCHAR(250) NULL,
+    codigo_asignatura VARCHAR(12) NOT NULL,
+    nombre_asignatura VARCHAR(250) NOT NULL,
+    descripcion_asignatura VARCHAR(250) NULL,
 
     CONSTRAINT pk_asignaturas PRIMARY KEY (id)
 );
