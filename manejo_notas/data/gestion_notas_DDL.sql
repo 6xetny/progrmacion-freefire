@@ -2,7 +2,7 @@ USE gestion_notas;
 
 CREATE TABLE IF NOT EXISTS docentes(
     id INT NOT NULL AUTO_INCREMENT,
-    rut_docente VARCHAR(12) NOT NULL,
+    rut_docente VARCHAR(12) NOT NULL UNIQUE,
     nombre_docente VARCHAR(250) NOT NULL,
     email_docente VARCHAR(250) NULL,
 
@@ -26,4 +26,13 @@ CREATE TABLE IF NOT EXISTS docentes_asignaturas(
     CONSTRAINT pk_docentes_asignaturas PRIMARY KEY (id),
     CONSTRAINT fk_docentes FOREIGN KEY (id_docente) REFERENCES docentes(id),
     CONSTRAINT fk_asignaturas FOREIGN KEY (id_asignatura) REFERENCES asignaturas(id)
+);
+
+CREATE TABLE IF NOT EXISTS opciones_menu(
+    id INT NOT NULL AUTO_INCREMENT,
+    opcion_menu VARCHAR(250) NOT NULL,
+    numero_opcion VARCHAR(2) NOT NULL,
+    tipo_menu INT NOT NULL,
+
+    CONSTRAINT pk_opciones_menu PRIMARY KEY (id)
 );
