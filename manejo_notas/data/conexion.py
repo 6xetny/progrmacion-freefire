@@ -1,10 +1,12 @@
 import mysql.connector
+from auxiliares.data_conexion import servidor, puerto, usuario, base_datos, contrasena
 
 conexion = mysql.connector.connect(
-    host='127.0.0.1',
-    port=3306,
-    user='root',
-    database='gestion_notas'
+    host=servidor,
+    port=puerto,
+    user=usuario,
+    database=base_datos,
+    password=contrasena
 )
 
 cursor = conexion.cursor()
@@ -14,6 +16,6 @@ def ejecutar_consulta(consulta):
     resultado = cursor.fetchall()
     return resultado
 
-cursor.execute('SELECT numero_opcion,opcion_menu FROM opciones_menu')
-resultado = cursor.fetchall()
-print(resultado)
+# cursor.execute('SELECT numero_opcion,opcion_menu FROM opciones_menu')
+# resultado = cursor.fetchall()
+# print(resultado)
