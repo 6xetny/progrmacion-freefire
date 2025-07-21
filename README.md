@@ -1,3 +1,5 @@
-hola amigos de youtube, aki les dejo mis projectos del fri fayer para que les den like ok amigos eso es todo saludos amigos
-dios llos bendiga amen
-a
+Versión de MysqlConnector para Python 3.11
+pip install mysql-connector-python==8.0.33
+
+prettytable 3.16.0
+pip install prettytable
